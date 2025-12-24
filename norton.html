@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antivirus Guide </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>/* =========================
+/* =========================
+   HERO SECTION (NO CROP)
+========================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;              /* fixed height hatao */
+  overflow: hidden;
+}
+
+/* IMAGE – FULL SHOW, NO CUT */
+.hero-img {
+  width: 100%;
+  height: auto;              /* image apni original height lega */
+  object-fit: contain;       /* ❗ crop band */
+  display: block;
+}
+
+/* overlay bilkul nahi */
+.hero::after {
+  display: none;
+}
+
+/* TEXT OVER IMAGE */
+.hero-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;              /* text niche shift */
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+/* text readability */
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+.hero {
+  background: #ffffff;
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   FEATURES SECTION
+========================= */
+.section {
+  padding: 70px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.section .desc {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  font-size: 15.5px;
+  color: #475569;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.feature {
+  background: #f8fafc;
+  padding: 26px 22px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.feature img {
+  width: 60px;
+  margin-bottom: 14px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+.product-section {
+  padding: 60px 0;
+}
+
+.section-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section-header .view-all {
+  font-size: 14px;
+  color: #0aa6a6;
+}
+
+.section-header .view-all:hover {
+  text-decoration: underline;
+}
+
+.product-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb img {
+  max-width: 75%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.prod-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  margin: 10px 0 6px;
+}
+
+.prod-price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.prod-price .old {
+  text-decoration: line-through;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.prod-price .new {
+  color: #0aa6a6;
+}
+
+/* ADD TO CART */
+.btn-add {
+  background: #0aa6a6;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .25s ease, transform .15s ease;
+}
+
+.btn-add:hover {
+  background: #088f8f;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 340px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+  }
+}
+
+
+
+/* =========================
+   WHY CHOOSE NORTON
+========================= */
+.trust-section {
+  padding: 70px 0;
+  background: #f8fafc;
+}
+
+.trust-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.trust-subtitle {
+  text-align: center;
+  font-size: 15.5px;
+  color: #475569;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+/* 🔥 FORCE 5 ITEMS IN ONE ROW */
+.trust-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 👈 exactly 5 */
+  gap: 22px;
+}
+
+.trust-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px 18px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.trust-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+.trust-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.trust-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.trust-item p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.55;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 1024px) {
+  .trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .trust-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* =========================
+   FIX NAVBAR OVER HERO
+========================= */
+
+/* Navbar always on top */
+.navbar {
+  position: sticky;      /* ya fixed agar already hai */
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+}
+
+/* Hero ko navbar ke neeche push karo */
+.hero {
+  margin-top: 82px;      /* 👈 navbar height ke barabar */
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-flex">
+    <span>✉ info@Antivirusguide.shop</span>
+    <a href="contact.html" class="top-btn">GET IN TOUCH</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+
+   <div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Antivirus Guide">
+    <span>ANTIVIRUS GUIDE</span>
+  </a>
+</div>
+
+
+    <nav class="menu" id="navMenu">
+       <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+           <a href="Account.html">My Account</a>
+           <a href="Cart.html">Cart</a>
+
+    </nav>
+
+    <div class="search-icon" id="openSearch">🔍</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  </div>
+</header>
+
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search pages or products..."
+      onkeyup="liveSearch()"
+    >
+    <div class="search-results" id="searchResults"></div>
+    <button class="close-search" onclick="closeSearch()">✕</button>
+  </div>
+</div>
+<script>
+function toggleMenu(el) {
+  const menu = document.getElementById("navMenu");
+
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+
+  /* hamburger to X toggle */
+  el.classList.toggle("active");
+}
+</script>
+
+
+<section class="hero" role="img" aria-label="Promotional banner" style="margin-top: 1px;">
+    <!-- Ensure img/norton.jpg is the full-resolution banner you want to show -->
+    <img class="hero-img" src="img/norton.jpeg" alt="LifeLock / Norton promotional banner">
+   
+  </section>
+
+<section class="trust-section">
+  <div class="container">
+
+    <h2 class="trust-title">Why Choose Norton?</h2>
+    <p class="trust-subtitle">
+      Trusted cybersecurity protection used by millions of users worldwide.
+    </p>
+
+    <div class="trust-grid">
+
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span>
+        <h3>30+ Years Experience</h3>
+        <p>Over three decades of proven cybersecurity expertise and innovation.</p>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon">⚡</span>
+        <h3>Real-Time Threat Protection</h3>
+        <p>Advanced real-time protection against viruses, malware, and ransomware.</p>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon">🌍</span>
+        <h3>Used by Millions</h3>
+        <p>Trusted by millions of users and businesses around the world.</p>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon">🔄</span>
+        <h3>Auto & Manual Renewal</h3>
+        <p>Flexible subscription options with full control over renewals.</p>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-icon">🇺🇸</span>
+        <h3>USA Based Support</h3>
+        <p>Reliable customer support backed by USA-based infrastructure.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- 💎 Features -->
+  <section class="section">
+    <h2>Multi-Device Subscriptions — LifeLock PC Protection in USA</h2>
+    <p class="desc">Antivirus Guide offers top-rated premium subscriptions for your Phone, PC, Mac, and Tablets. Our single plans cover all devices with LifeLock, Norton & Trend Micro products.</p>
+
+    <div class="features">
+      <div class="feature">
+        <img src="img/service-icon3.webp" alt="PC">
+        <h3>For PC</h3>
+        <p>Protect your system with LifeLock Identity Theft Protection and Norton 360 Security Suite.</p>
+      </div>
+
+      <div class="feature">
+        <img src="img/service-icon2.webp" alt="Phones">
+        <h3>Phones</h3>
+        <p>Secure smartphones with LifeLock and Norton 360 mobile protection anytime, anywhere.</p>
+      </div>
+
+      <div class="feature">
+        <img src="img/service-icon6.webp" alt="Gaming Consoles">
+        <h3>Gaming Consoles</h3>
+        <p>Enjoy safe gaming with Norton 360 with LifeLock Ultimate Plus (VPN & Privacy Tools).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💻 Product Grid -->
+  <section class="product-section">
+      <div class="section-header">
+        <h2>Norton Security</h2>
+        <a class="view-all" href="#">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p9 -->
+        <article class="product" data-id="p9" data-title="Norton 360 Premium For 10 Devices" data-price="99.99" data-image="img/n1.webp">
+          <a class="product-link" href="product-n1.html" title="Norton 360 Premium">
+            <div class="thumb"><img src="img/n1.webp" alt="Norton 360 Premium"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Premium For 10 Devices</div>
+            <div class="prod-price"><span class="new">$99.99</span></div>
+            <button class="btn-add" data-id="p9" data-price="99.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p10 -->
+        <article class="product" data-id="p10" data-title="Norton 360 Standard — 1 Device" data-price="64.99" data-image="img/n2.webp">
+          <a class="product-link" href="product-n2.html" title="Norton 360 Standard">
+            <div class="thumb"><img src="img/n2.webp" alt="Norton Standard"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Standard — 1 Device</div>
+            <div class="prod-price"><span class="new">$64.99</span></div>
+            <button class="btn-add" data-id="p10" data-price="64.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p11 -->
+        <article class="product" data-id="p11" data-title="Norton 360 Deluxe — 3 Devices" data-price="79.99" data-image="img/n3.webp">
+          <a class="product-link" href="product-n3.html" title="Norton Deluxe">
+            <div class="thumb"><img src="img/n3.webp" alt="Norton Deluxe"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Deluxe — 3 Devices</div>
+            <div class="prod-price"><span class="new">$79.99</span></div>
+            <button class="btn-add" data-id="p11" data-price="79.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p12 -->
+        <article class="product" data-id="p12" data-title="Norton 360 Deluxe - 5 devices" data-price="89.99" data-image="img/n4.webp">
+          <a class="product-link" href="product-n4.html" title="Norton 5 devices">
+            <div class="thumb"><img src="img/n4.webp" alt="Norton 5 devices"></div>
+          </a>
+          <div>
+            <div class="prod-title">Norton 360 Deluxe - 5 devices</div>
+            <div class="prod-price"><span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p12" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+     <section class="product-section">
+      <div class="section-header">
+        <h2>TREND MICRO</h2>
+        <a class="view-all" href="#">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p5 -->
+        <article class="product" data-id="p5" data-title="Trend Micro Internet Security 3 Devices 1 Year" data-price="49.99" data-image="img/t1.webp">
+          <a class="product-link" href="product-t1.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="img/t1.webp" alt="Trend Micro Internet"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security 3 Devices 1 Year</div>
+            <div class="prod-price"><span class="old">$59.99</span> <span class="new">$49.99</span></div>
+            <button class="btn-add" data-id="p5" data-price="49.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p6 -->
+        <article class="product" data-id="p6" data-title="Trend Micro Internet Security 3 User, 1 Year" data-price="89.99" data-image="img/t2.webp">
+          <a class="product-link" href="product-t2.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="img/t2.webp" alt="Trend Micro Internet"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security 3 User, 1 Year</div>
+            <div class="prod-price"><span class="old">$99.99</span> <span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p6" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p7 -->
+        <article class="product" data-id="p7" data-title="Trend Micro Maximum Security 3 Devices 1 Year" data-price="99.99" data-image="img/t3.webp">
+          <a class="product-link" href="product-t3.html" title="Trend Micro Maximum">
+            <div class="thumb"><img src="img/t3.webp" alt="Trend Micro Maximum"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Maximum Security 3 Devices 1 Year</div>
+            <div class="prod-price"><span class="old">$119.99</span> <span class="new">$99.99</span></div>
+            <button class="btn-add" data-id="p7" data-price="99.99">Add to cart</button>
+          </div>
+        </article>
+
+        <!-- p8 -->
+        <article class="product" data-id="p8" data-title="Trend Micro Internet Security" data-price="89.99" data-image="img/t4.webp">
+          <a class="product-link" href="product-t4.html" title="Trend Micro Internet Security">
+            <div class="thumb"><img src="img/t4.webp" alt="Trend Micro Internet Security"></div>
+          </a>
+          <div>
+            <div class="prod-title">Trend Micro Internet Security</div>
+            <div class="prod-price"><span class="old">$109.99</span> <span class="new">$89.99</span></div>
+            <button class="btn-add" data-id="p8" data-price="89.99">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+<script>
+  
+    // --- CART LOGIC (localStorage) ---
+    function getCart() {
+      try { return JSON.parse(localStorage.getItem('Antivirusguide_cart') || '[]'); } catch(e){ return []; }
+    }
+    function saveCart(cart) {
+      localStorage.setItem('Antivirusguide_cart', JSON.stringify(cart));
+      updateCartAmount();
+    }
+    function updateCartAmount() {
+      const cart = getCart();
+      const total = cart.reduce((s,i) => s + (Number(i.price) * Number(i.qty)), 0);
+      const el = document.getElementById('cartAmount');
+      if(el) el.textContent = '$' + total.toFixed(2);
+    }
+
+    // initialize
+    updateCartAmount();
+
+    // helper - product data
+    function getProductDataFromArticle(el) {
+      if(!el) return null;
+      const id = el.getAttribute('data-id') || ('p_' + Date.now());
+      const title = el.getAttribute('data-title') || (el.querySelector('.prod-title') && el.querySelector('.prod-title').textContent.trim()) || 'Product';
+      let price = el.getAttribute('data-price') || '';
+      if(!price) {
+        // try read from .prod-price .new text
+        const priceText = el.querySelector('.prod-price .new')?.textContent || '';
+        price = priceText.replace(/[^0-9.-]+/g,'') || '0';
+      }
+      const image = el.getAttribute('data-image') || (el.querySelector('.thumb img') && el.querySelector('.thumb img').getAttribute('src')) || '';
+      return { id, title, price: Number(price), image };
+    }
+
+    // add-to-cart click handlers
+    document.querySelectorAll('.btn-add').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const article = btn.closest('.product');
+        const pdata = getProductDataFromArticle(article);
+        if(!pdata) return;
+        const cart = getCart();
+        const idx = cart.findIndex(i => i.id === pdata.id);
+        if(idx > -1) {
+          cart[idx].qty = Number(cart[idx].qty) + 1;
+        } else {
+          cart.push({ id: pdata.id, title: pdata.title, price: Number(pdata.price), image: pdata.image, qty: 1 });
+        }
+        saveCart(cart);
+        // redirect to cart page
+        window.location.href = 'Cart.html';
+      });
+    });
+
+    // make product articles keyboard accessible
+    document.querySelectorAll('.product').forEach(prod => {
+      prod.setAttribute('tabindex','0');
+      prod.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') {
+          const link = prod.querySelector('a.product-link');
+          if(link) link.click();
+        }
+      });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="brand-line">
+        <img src="img/logo.png" alt="Antivirus Guide Logo">
+        <h3>ANTIVIRUS GUIDE</h3>
+      </div>
+<p>ANTIVIRUS GUIDE is your trusted platform for antivirus software, digital security, and complete protection solutions.</p>
+
+    </div>
+
+    <div>
+      <h4>Important Links</h4>
+      <a href="Terms.html">Terms & Conditions</a>
+      <a href="Refund.html">Refund & Return Policy</a>
+      <a href="Privacy.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+      <a href="Shopping.html">Shopping Policy</a>
+      <a href="Payment.html">Payment Policy</a>
+      <a href="Cookie.html">Cookie Policy</a>
+      <a href="Shipping.html">Shipping/Delivery Policy</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>USA</p>
+      <p>info@Antivirusguide.shop</p>
+    </div>
+
+    <div>
+      <h4>Service hours</h4>
+      <div class="hours"><span>Monday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Tuesday</span><span>08:00 - 18:00</span></div>
+      <div class="hours"><span>Wednesday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Thursday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Friday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Saturday</span><span>Closed</span></div>
+      <div class="hours"><span>Sunday</span><span>Closed</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ANTIVIRUS GUIDE - All Rights Reserved
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* SEARCH OPEN */
+document.getElementById("openSearch").onclick = () => {
+  document.getElementById("searchOverlay").style.display = "flex";
+  document.getElementById("searchInput").focus();
+};
+
+/* SEARCH CLOSE */
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+/* ESC CLOSE */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeSearch();
+});
+
+/* DEMO SEARCH DATA */
+const searchData = [
+  // Pages
+  "About",
+  "Disclaimer",
+  "Privacy Policy",
+  "Terms",
+  "Refund Policy",
+  "Contact Us",
+
+  // Antivirus Brands
+  "Norton",
+  "McAfee",
+  "Webroot",
+  "Trend Micro",
+  "Kaspersky",
+
+  // Shop
+  "Shop"
+];
+
+
+/* LIVE SEARCH */
+function liveSearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  searchData
+    .filter(item => item.toLowerCase().includes(input))
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item;
+      results.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>

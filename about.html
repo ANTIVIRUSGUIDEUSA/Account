@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antivirus Guide </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>/* =========================
+ /* =========================
+   PAGE TITLE (About Us)
+========================= */
+.tf-page-title {
+  background: #f8fafc;
+  padding: 70px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tf-page-title .box-title {
+  text-align: center;
+}
+
+.tf-page-title .title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.4px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+
+
+/* =========================
+   ABOUT CONTENT SECTION
+========================= */
+.flat-spacing-3 {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.flat-spacing-3.pb-0 {
+  padding-bottom: 0;
+}
+
+.flat-title-2 {
+  margin-bottom: 40px;
+}
+
+.box-text {
+  max-width: 980px;
+  margin: auto;
+}
+
+.text-md {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.display-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Paragraphs */
+.display-gap p {
+  margin: 0;
+}
+
+/* Headings inside content */
+.display-gap h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+  position: relative;
+  padding-left: 14px;
+}
+
+.display-gap h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 4px;
+  height: 18px;
+  background: #0aa6a6;
+  border-radius: 2px;
+}
+
+/* Lists */
+.display-gap ul {
+  padding-left: 20px;
+  margin: 5px 0 10px;
+}
+
+.display-gap ul li {
+  list-style: disc;
+}
+
+.display-gap ul li p {
+  margin: 6px 0;
+  font-size: 15.5px;
+  color: #334155;
+}
+
+/* Strong text */
+.display-gap strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+
+/* =========================
+   WHY CHOOSE SECTION
+========================= */
+.flat-title-2.text-center {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.display-md-2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.text-main {
+  color: #64748b;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* Left content */
+.item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 22px;
+  color: #0f172a;
+}
+
+.item p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #475569;
+  margin-top: 6px;
+}
+
+
+/* =========================
+   RIGHT ICON CARDS
+========================= */
+.why-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.why-icon-card {
+  display: flex;
+  gap: 14px;
+  background: #f8fafc;
+  padding: 16px 18px;
+  border-radius: 10px;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+}
+
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  background: #0aa6a6;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.why-icon-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  color: #0f172a;
+}
+
+.why-icon-card p {
+  font-size: 14.5px;
+  margin-top: 4px;
+  color: #475569;
+}
+
+
+/* =========================
+   SWIPER ICON BOX
+========================= */
+.tf-icon-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px;
+  background: #ffffff;
+  height: 100%;
+}
+
+.tf-icon-box .box-icon {
+  font-size: 26px;
+  color: #0aa6a6;
+  margin-bottom: 14px;
+}
+
+.tf-icon-box h6 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.tf-icon-box .text-sm {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .tf-page-title {
+    padding: 50px 0;
+  }
+
+  .tf-page-title .title {
+    font-size: 26px;
+  }
+
+  .display-md-2 {
+    font-size: 24px;
+  }
+
+  .flat-spacing-3 {
+    padding: 50px 0;
+  }
+
+  .item h3 {
+    font-size: 18px;
+  }
+}
+/* =========================
+   ABOUT PAGE – CENTER HEADINGS
+========================= */
+
+/* h2 headings center */
+.display-gap h2 {
+  text-align: center;
+  padding-left: 0;              /* left line remove */
+}
+
+/* left accent line remove */
+.display-gap h2::before {
+  display: none;
+}
+
+/* optional underline under centered headings */
+.display-gap h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #0aa6a6;          /* theme color */
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+/* =========================
+   ABOUT US – FORCE WHITE BACKGROUND
+========================= */
+
+/* Page title section */
+.tf-page-title {
+  background: #ffffff !important;
+}
+
+/* Main about content section */
+.flat-spacing-3 {
+  background: #ffffff !important;
+}
+
+/* Container safety (extra) */
+.flat-spacing-3 .container,
+.flat-spacing-3.pb-0 {
+  background: #ffffff !important;
+}
+
+/* Remove any inherited gray */
+body {
+  background: #ffffff;
+}
+.tf-page-title .title span::after {
+  content: "";
+  display: block;
+  width: 80px;               /* underline size */
+  height: 4px;
+  background-color: #0aa6a6;  /* navbar color */
+  margin: 14px auto 0;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.tf-page-title:hover .title span::after {
+  width: 120px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-flex">
+    <span>✉ info@Antivirusguide.shop</span>
+    <a href="contact.html" class="top-btn">GET IN TOUCH</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+
+   <div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Antivirus Guide">
+    <span>ANTIVIRUS GUIDE</span>
+  </a>
+</div>
+
+
+    <nav class="menu" id="navMenu">
+       <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+           <a href="Account.html">My Account</a>
+           <a href="Cart.html">Cart</a>
+
+    </nav>
+
+    <div class="search-icon" id="openSearch">🔍</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  </div>
+</header>
+
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search pages or products..."
+      onkeyup="liveSearch()"
+    >
+    <div class="search-results" id="searchResults"></div>
+    <button class="close-search" onclick="closeSearch()">✕</button>
+  </div>
+</div>
+<script>
+function toggleMenu(el) {
+  const menu = document.getElementById("navMenu");
+
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+
+  /* hamburger to X toggle */
+  el.classList.toggle("active");
+}
+</script>
+
+
+
+
+
+<!-- CONTACT PAGE TITLE -->
+<section class="tf-page-title">
+  <div class="container">
+    <div class="box-title text-center">
+      <h1 class="title w-100"><span>About</span></h1>
+    </div>
+  </div>
+</section>
+
+<section class="flat-spacing-3 pb-0">
+  <div class="container">
+    <div class="flat-title-2 d-xl-flex justify-content-xl-between mt-4">
+      <div class="box-text">
+        <div class="text-md display-gap">
+
+          <p>
+            Welcome to <strong>AntivirusGuide</strong>, an independent and professionally operated e-commerce
+            platform dedicated to helping individuals, professionals, and businesses make
+            <strong>safe, informed decisions</strong> when purchasing antivirus software and digital security solutions.
+          </p>
+
+          <p>
+            We specialize in providing <strong>official, licensed, and authorized antivirus products</strong>
+            as a <strong>third-party independent reseller and review platform</strong>. Our goal is to simplify
+            cybersecurity shopping by combining <strong>trusted products, transparent information,
+            and secure digital delivery</strong>—all in one place.
+          </p>
+
+          <p>
+            At AntivirusGuide, we understand that digital protection is no longer optional.
+            That’s why our platform is designed to empower users with
+            <strong>clarity, authenticity, and confidence</strong> at every step of the buying journey.
+          </p>
+
+          <h2>What We Offer</h2>
+
+          <p>
+            AntivirusGuide offers a carefully curated selection of
+            <strong>premium antivirus and cybersecurity solutions</strong> sourced from globally recognized brands.
+            Every product listed on our platform is:
+          </p>
+
+          <ul>
+            <li><p>Officially licensed and authorized</p></li>
+            <li><p>Delivered digitally for instant access</p></li>
+            <li><p>Accompanied by clear product information and guidance</p></li>
+            <li><p>Backed by reliable customer support</p></li>
+          </ul>
+
+          <p>
+            Whether you are securing a personal device, protecting a remote workspace,
+            or supporting a small business environment, AntivirusGuide helps you find
+            the right solution without confusion or risk.
+          </p>
+
+          <h2>How We Work</h2>
+
+          <p>
+            All transactions on AntivirusGuide are processed securely through
+            <strong>trusted and encrypted payment gateways such as Stripe</strong>.
+            Once a purchase is completed, license keys and activation details are
+            <strong>delivered electronically to your registered email address</strong>,
+            ensuring fast, eco-friendly, and hassle-free fulfillment.
+          </p>
+
+          <p>
+            We maintain a strict <strong>zero-tolerance policy</strong> toward counterfeit,
+            cracked, or unauthorized software. Every product is sourced through
+            verified distribution channels to ensure complete legitimacy.
+          </p>
+
+          <h2>Independent & Unbiased Platform</h2>
+
+          <p>
+            AntivirusGuide operates as a <strong>fully independent platform</strong>.
+            We are not owned by, affiliated with, or controlled by any single antivirus
+            brand or software provider. This independence allows us to:
+          </p>
+
+          <ul>
+            <li><p>Present unbiased product information</p></li>
+            <li><p>Offer multiple brand choices based on user needs</p></li>
+            <li><p>Maintain transparent pricing and comparisons</p></li>
+            <li><p>Focus solely on customer benefit—not brand promotion</p></li>
+          </ul>
+
+          <h2>Our Values</h2>
+
+          <p>
+            Everything we do at AntivirusGuide is guided by a strong set of principles:
+          </p>
+
+          <ul>
+            <li><p><strong>Transparency</strong> in product listings and policies</p></li>
+            <li><p><strong>Respect for intellectual property</strong></p></li>
+            <li><p><strong>Customer-first support and responsiveness</strong></p></li>
+            <li><p><strong>Compliance</strong> with modern e-commerce standards</p></li>
+            <li><p><strong>Trust and long-term reliability</strong></p></li>
+          </ul>
+
+          <p>
+            Our customers choose AntivirusGuide not just for the products we offer,
+            but for the <strong>honest, people-first experience</strong> we provide.
+          </p>
+
+          <h2>Respect for Intellectual Property</h2>
+
+          <p>
+            All trademarks, logos, and brand names mentioned or displayed on AntivirusGuide
+            are the property of their respective owners. AntivirusGuide does not claim
+            ownership, endorsement, or direct affiliation with any third-party brand.
+            References are made strictly for
+            <strong>informational, descriptive, and compatibility purposes</strong>.
+          </p>
+
+          <h2>Our Commitment to You</h2>
+
+          <p>
+            AntivirusGuide is committed to building a platform where users can shop
+            with confidence, clarity, and peace of mind. From product discovery to
+            secure checkout and digital delivery, we aim to make cybersecurity
+            purchasing <strong>simple, safe, and trustworthy</strong>.
+          </p>
+
+          <p>
+            Thank you for choosing AntivirusGuide as your trusted resource for
+            antivirus protection and digital security solutions.
+            If you have any questions, feedback, or support needs,
+            our team is always here to help.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="brand-line">
+        <img src="img/logo.png" alt="Antivirus Guide Logo">
+        <h3>ANTIVIRUS GUIDE</h3>
+      </div>
+<p>ANTIVIRUS GUIDE is your trusted platform for antivirus software, digital security, and complete protection solutions.</p>
+
+    </div>
+
+    <div>
+      <h4>Important Links</h4>
+      <a href="Terms.html">Terms & Conditions</a>
+      <a href="Refund.html">Refund & Return Policy</a>
+      <a href="Privacy.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+      <a href="Shopping.html">Shopping Policy</a>
+      <a href="Payment.html">Payment Policy</a>
+      <a href="Cookie.html">Cookie Policy</a>
+      <a href="Shipping.html">Shipping/Delivery Policy</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>USA</p>
+      <p>info@Antivirusguide.shop</p>
+    </div>
+
+    <div>
+      <h4>Service hours</h4>
+      <div class="hours"><span>Monday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Tuesday</span><span>08:00 - 18:00</span></div>
+      <div class="hours"><span>Wednesday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Thursday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Friday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Saturday</span><span>Closed</span></div>
+      <div class="hours"><span>Sunday</span><span>Closed</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ANTIVIRUS GUIDE - All Rights Reserved
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* SEARCH OPEN */
+document.getElementById("openSearch").onclick = () => {
+  document.getElementById("searchOverlay").style.display = "flex";
+  document.getElementById("searchInput").focus();
+};
+
+/* SEARCH CLOSE */
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+/* ESC CLOSE */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeSearch();
+});
+
+/* DEMO SEARCH DATA */
+const searchData = [
+  // Pages
+  "About",
+  "Disclaimer",
+  "Privacy Policy",
+  "Terms",
+  "Refund Policy",
+  "Contact Us",
+
+  // Antivirus Brands
+  "Norton",
+  "McAfee",
+  "Webroot",
+  "Trend Micro",
+  "Kaspersky",
+
+  // Shop
+  "Shop"
+];
+
+
+/* LIVE SEARCH */
+function liveSearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  searchData
+    .filter(item => item.toLowerCase().includes(input))
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item;
+      results.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>

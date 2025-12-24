@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antivirus Guide </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>/* =========================
+   PAGE TITLE (PAYMENT POLICY)
+========================= */
+.tf-page-title {
+  background: #ffffff;
+  padding: 70px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tf-page-title .box-title {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.tf-page-title .title {
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+}
+
+.tf-page-title .title span {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Big underline – navbar color */
+.tf-page-title .title span::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  background-color: #0aa6a6; /* navbar color */
+  margin: 14px auto 0;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.tf-page-title:hover .title span::after {
+  width: 180px;
+}
+
+/* =========================
+   PAYMENT POLICY CONTENT
+========================= */
+.s-term-user {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.s-term-user .content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.term-item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Paragraph */
+.term-item p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #475569;
+  text-align: left;
+}
+
+/* Center headings */
+.term-item h2,
+.term-item h3 {
+  text-align: center;
+}
+
+/* Heading styles */
+.term-item h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 32px;
+}
+
+.term-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 20px;
+}
+
+/* Unordered lists */
+.term-item ul {
+  margin: 10px 0 10px 22px;
+  padding-left: 18px;
+}
+
+.term-item ul li {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Ordered lists */
+.term-item ol {
+  margin: 10px 0 10px 22px;
+  padding-left: 20px;
+}
+
+.term-item ol li {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Strong text */
+.term-item strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .tf-page-title {
+    padding: 50px 0;
+  }
+
+  .tf-page-title .title {
+    font-size: 28px;
+  }
+
+  .s-term-user {
+    padding: 50px 0;
+  }
+
+  .term-item h2 {
+    font-size: 22px;
+  }
+
+  .term-item p,
+  .term-item ul li,
+  .term-item ol li {
+    font-size: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-flex">
+    <span>✉ info@Antivirusguide.shop</span>
+    <a href="contact.html" class="top-btn">GET IN TOUCH</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+
+   <div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Antivirus Guide">
+    <span>ANTIVIRUS GUIDE</span>
+  </a>
+</div>
+
+
+    <nav class="menu" id="navMenu">
+       <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+           <a href="Account.html">My Account</a>
+           <a href="Cart.html">Cart</a>
+
+    </nav>
+
+    <div class="search-icon" id="openSearch">🔍</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  </div>
+</header>
+
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search pages or products..."
+      onkeyup="liveSearch()"
+    >
+    <div class="search-results" id="searchResults"></div>
+    <button class="close-search" onclick="closeSearch()">✕</button>
+  </div>
+</div>
+<script>
+function toggleMenu(el) {
+  const menu = document.getElementById("navMenu");
+
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+
+  /* hamburger to X toggle */
+  el.classList.toggle("active");
+}
+</script>
+
+
+
+
+
+<!-- DUMMY CONTENT -->
+<section class="tf-page-title">
+  <div class="container">
+    <div class="box-title text-center">
+      <h1 class="title w-100"><span>Payment Policy</span></h1>
+    </div>
+  </div>
+</section>
+<!-- /Title Page -->
+
+<!-- Payment Policy -->
+<section class="s-term-user flat-spacing-13">
+  <div class="container">
+    <div class="content">
+      <div class="term-item display-gap">
+
+        <p>
+          At <strong>ANTIVIRUS GUIDE</strong>, we are committed to providing a safe,
+          smooth, and transparent checkout experience for all customers.
+          This Payment Policy explains how payments are processed, how your
+          information is protected, and how we ensure reliable digital transactions.
+        </p>
+
+        <h2>About ANTIVIRUS GUIDE</h2>
+        <p>
+          ANTIVIRUS GUIDE is an <strong>independent e-commerce platform</strong>
+          offering <strong>authentic antivirus and cybersecurity software</strong>.
+          We operate as a <strong>third-party authorized reseller</strong> and focus on
+          delivering secure, trustworthy, and user-friendly digital services.
+        </p>
+
+        <h2>Accepted Payment Methods</h2>
+        <p>
+          ANTIVIRUS GUIDE accepts payments <strong>exclusively through Stripe</strong>,
+          a globally trusted and PCI-compliant payment gateway.
+          Stripe provides advanced encryption, fraud prevention, and secure
+          transaction handling to protect your payment information.
+        </p>
+
+        <h3>How Stripe Secures Your Transactions</h3>
+        <p>
+          When you complete a purchase, your payment details are encrypted and
+          processed directly through <strong>Stripe’s secure systems</strong>.
+          ANTIVIRUS GUIDE does <strong>not</strong> store or access your card details.
+        </p>
+
+        <ul>
+          <li><strong>Encrypted and confidential payment processing</strong></li>
+          <li><strong>Identity verification and fraud prevention</strong></li>
+          <li><strong>Real-time transaction authorization</strong></li>
+        </ul>
+
+        <p>
+          This ensures that your financial information remains protected at all times.
+        </p>
+
+        <h2>Payment Authorization & Confirmation</h2>
+        <p>
+          After you complete the checkout process:
+        </p>
+
+        <ol>
+          <li>Your payment is securely authorized by Stripe</li>
+          <li>A confirmation receipt is generated instantly</li>
+          <li>
+            You receive a <strong>digital confirmation email</strong> from
+            ANTIVIRUS GUIDE containing your order and delivery details
+          </li>
+        </ol>
+
+        <p>
+          Please ensure your email address is entered correctly during checkout
+          to avoid delays in receiving your product.
+        </p>
+
+        <h2>Delivery Method: Electronic Fulfillment</h2>
+        <p>
+          All antivirus software products sold on ANTIVIRUS GUIDE are
+          <strong>digitally delivered</strong>.
+          Upon successful payment verification, you will receive:
+        </p>
+
+        <ul>
+          <li>Your license key or activation code</li>
+          <li>Installation and activation instructions</li>
+          <li>Customer support contact information</li>
+        </ul>
+
+        <p>
+          Most orders are fulfilled within minutes, though delivery may take up
+          to <strong>24 hours</strong> in rare verification cases.
+        </p>
+
+        <h2>Taxes & Pricing</h2>
+        <p>
+          All prices displayed on ANTIVIRUS GUIDE are shown clearly at checkout.
+          Applicable taxes, if any, are calculated before payment confirmation.
+          Prices may change without prior notice, but confirmed orders will always
+          be charged at the agreed checkout price.
+        </p>
+
+        <h2>Refunds & Payment Disputes</h2>
+        <p>
+          Due to the <strong>digital nature of our products</strong>, refunds are
+          generally not available once a license key has been issued.
+          However, if you experience issues such as:
+        </p>
+
+        <ul>
+          <li>Non-receipt of your license key</li>
+          <li>Activation or technical errors</li>
+          <li>Duplicate or failed payments</li>
+        </ul>
+
+        <p>
+          Our <strong>customer support team</strong> will work with you to resolve
+          the issue promptly and fairly.
+        </p>
+
+        <h2>Chargebacks & Failed Payments</h2>
+        <p>
+          Attempting unauthorized chargebacks or payment reversals may result in
+          suspension of services. If a payment fails or is reversed, delivery of
+          digital products may be delayed or canceled until the issue is resolved.
+        </p>
+
+        <h2>Intellectual Property & Brand Integrity</h2>
+        <p>
+          All trademarks, brand names, and logos referenced on ANTIVIRUS GUIDE are
+          the property of their respective owners. ANTIVIRUS GUIDE does
+          <strong>not claim ownership, endorsement, or partnership</strong> with
+          third-party brands unless explicitly stated.
+        </p>
+
+        <h2>Policy Acceptance</h2>
+        <p>
+          By completing a purchase on ANTIVIRUS GUIDE, you acknowledge that you
+          have read, understood, and agreed to this Payment Policy.
+        </p>
+
+        <h2>Our Commitment</h2>
+        <p>
+          ANTIVIRUS GUIDE is built on <strong>trust, transparency, and ethical
+          business practices</strong>. By partnering with secure providers like
+          Stripe and maintaining clear communication, we strive to give our
+          customers complete confidence in every transaction.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="brand-line">
+        <img src="img/logo.png" alt="Antivirus Guide Logo">
+        <h3>ANTIVIRUS GUIDE</h3>
+      </div>
+<p>ANTIVIRUS GUIDE is your trusted platform for antivirus software, digital security, and complete protection solutions.</p>
+
+    </div>
+
+    <div>
+      <h4>Important Links</h4>
+      <a href="Terms.html">Terms & Conditions</a>
+      <a href="Refund.html">Refund & Return Policy</a>
+      <a href="Privacy.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+      <a href="Shopping.html">Shopping Policy</a>
+      <a href="Payment.html">Payment Policy</a>
+      <a href="Cookie.html">Cookie Policy</a>
+      <a href="Shipping.html">Shipping/Delivery Policy</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>USA</p>
+      <p>info@Antivirusguide.shop</p>
+    </div>
+
+    <div>
+      <h4>Service hours</h4>
+      <div class="hours"><span>Monday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Tuesday</span><span>08:00 - 18:00</span></div>
+      <div class="hours"><span>Wednesday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Thursday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Friday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Saturday</span><span>Closed</span></div>
+      <div class="hours"><span>Sunday</span><span>Closed</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ANTIVIRUS GUIDE - All Rights Reserved
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* SEARCH OPEN */
+document.getElementById("openSearch").onclick = () => {
+  document.getElementById("searchOverlay").style.display = "flex";
+  document.getElementById("searchInput").focus();
+};
+
+/* SEARCH CLOSE */
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+/* ESC CLOSE */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeSearch();
+});
+
+/* DEMO SEARCH DATA */
+const searchData = [
+  // Pages
+  "About",
+  "Disclaimer",
+  "Privacy Policy",
+  "Terms",
+  "Refund Policy",
+  "Contact Us",
+
+  // Antivirus Brands
+  "Norton",
+  "McAfee",
+  "Webroot",
+  "Trend Micro",
+  "Kaspersky",
+
+  // Shop
+  "Shop"
+];
+
+
+/* LIVE SEARCH */
+function liveSearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  searchData
+    .filter(item => item.toLowerCase().includes(input))
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item;
+      results.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>

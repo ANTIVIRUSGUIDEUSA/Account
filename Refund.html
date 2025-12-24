@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antivirus Guide </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>/* =========================
+   PAGE TITLE (REFUND & RETURN)
+========================= */
+.tf-page-title {
+  background: #ffffff;
+  padding: 70px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tf-page-title .box-title {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.tf-page-title .title {
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+}
+
+.tf-page-title .title span {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Big underline – navbar color */
+.tf-page-title .title span::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  background-color: #0aa6a6; /* navbar color */
+  margin: 14px auto 0;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.tf-page-title:hover .title span::after {
+  width: 180px;
+}
+
+/* =========================
+   REFUND POLICY CONTENT
+========================= */
+.s-term-user {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.s-term-user .content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.term-item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Paragraph */
+.term-item p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #475569;
+  text-align: left;
+}
+
+/* Center headings */
+.term-item h2,
+.term-item h3 {
+  text-align: center;
+}
+
+/* Heading styles */
+.term-item h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 32px;
+}
+
+.term-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 20px;
+}
+
+/* Lists */
+.term-item ul {
+  margin: 10px 0 10px 22px;
+  padding-left: 18px;
+}
+
+.term-item ul li {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Strong text */
+.term-item strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .tf-page-title {
+    padding: 50px 0;
+  }
+
+  .tf-page-title .title {
+    font-size: 28px;
+  }
+
+  .s-term-user {
+    padding: 50px 0;
+  }
+
+  .term-item h2 {
+    font-size: 22px;
+  }
+
+  .term-item p,
+  .term-item ul li {
+    font-size: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-flex">
+    <span>✉ info@Antivirusguide.shop</span>
+    <a href="contact.html" class="top-btn">GET IN TOUCH</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+
+   <div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Antivirus Guide">
+    <span>ANTIVIRUS GUIDE</span>
+  </a>
+</div>
+
+
+    <nav class="menu" id="navMenu">
+       <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+           <a href="Account.html">My Account</a>
+           <a href="Cart.html">Cart</a>
+
+    </nav>
+
+    <div class="search-icon" id="openSearch">🔍</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  </div>
+</header>
+
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search pages or products..."
+      onkeyup="liveSearch()"
+    >
+    <div class="search-results" id="searchResults"></div>
+    <button class="close-search" onclick="closeSearch()">✕</button>
+  </div>
+</div>
+<script>
+function toggleMenu(el) {
+  const menu = document.getElementById("navMenu");
+
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+
+  /* hamburger to X toggle */
+  el.classList.toggle("active");
+}
+</script>
+
+
+
+
+
+<section class="tf-page-title">
+  <div class="container">
+    <div class="box-title text-center">
+      <h1 class="title w-100"><span>Refund & Return Policy</span></h1>
+    </div>
+  </div>
+</section>
+<!-- /Title Page -->
+
+<!-- Refund & Return Policy -->
+<section class="s-term-user flat-spacing-13">
+  <div class="container">
+    <div class="content">
+      <div class="term-item display-gap">
+
+        <p>
+          At <strong>ANTIVIRUS GUIDE</strong>, customer satisfaction is our top priority.
+          We believe in transparency and fairness in every transaction.
+          This Refund &amp; Return Policy explains the circumstances under which refunds may be issued,
+          ensuring a secure and trustworthy shopping experience for all customers.
+        </p>
+
+        <h2>1. Digital Product Nature</h2>
+        <p>
+          All products sold on ANTIVIRUS GUIDE are
+          <em>digitally delivered antivirus software licenses</em>.
+          Once an order is confirmed and the license key or activation details
+          are delivered to the <strong>registered email address</strong>,
+          the product is considered successfully delivered.
+        </p>
+
+        <p>
+          Due to the digital nature of these products and associated licensing terms,
+          <strong>returns are not applicable</strong>.
+          However, refunds may be granted under specific conditions outlined below.
+        </p>
+
+        <h2>2. Eligibility for Refunds</h2>
+        <p>
+          Refunds may be requested under the following circumstances:
+        </p>
+
+        <ul>
+          <li><strong>Non-delivery of Product</strong> – If the license key is not received within 24 hours of payment confirmation and the issue remains unresolved after contacting support.</li>
+          <li><strong>Invalid or Non-Working License Key</strong> – If the activation code is proven invalid after legitimate installation attempts.</li>
+          <li><strong>Duplicate Payment</strong> – If you are accidentally charged more than once for the same product.</li>
+          <li><strong>Incorrect Product Delivery</strong> – If the delivered product does not match the product ordered.</li>
+          <li><strong>Defective or Significantly Misdescribed Item</strong> – Where applicable and verifiable.</li>
+        </ul>
+
+        <p>
+          To request a refund, please contact us at
+          <strong>info@AntivirusGuide.shop</strong> with your order number,
+          product name, and a clear explanation of the issue.
+          Supporting screenshots or evidence may be requested where applicable.
+        </p>
+
+        <h2>3. Non-Refundable Situations</h2>
+        <p>
+          Refunds will <em>not</em> be issued in the following cases:
+        </p>
+
+        <ul>
+          <li>The correct product was delivered successfully and as described.</li>
+          <li>You no longer need or want the software after delivery.</li>
+          <li>The product was ordered by mistake.</li>
+          <li>Your device does not meet the system requirements listed on the product page.</li>
+          <li>The license key has been activated, redeemed, or used.</li>
+          <li>Any refund request made without prior authorization or outside the allowed time window.</li>
+        </ul>
+
+        <p>
+          Customers are strongly advised to carefully review product descriptions,
+          compatibility details, and system requirements before completing a purchase.
+        </p>
+
+        <h2>4. Refund Request Timeline</h2>
+        <p>
+          Refund requests must be submitted within <strong>7 days</strong> of product delivery.
+          Requests made after this period may not be eligible for review.
+        </p>
+
+        <h2>5. Refund Review &amp; Processing</h2>
+        <p>
+          Once a valid refund request is received:
+        </p>
+
+        <ul>
+          <li>Our support team will review the request within <strong>1–3 business days</strong>.</li>
+          <li>If approved, the refund will be issued to the <strong>original payment method</strong>.</li>
+          <li>Refund processing time may take <strong>5–10 business days</strong>, depending on your bank or card provider.</li>
+        </ul>
+
+        <p>
+          You will receive email confirmation once your refund has been processed.
+        </p>
+
+        <h2>6. Physical Products (If Applicable)</h2>
+        <p>
+          If ANTIVIRUS GUIDE offers physical products in the future (such as hardware or accessories),
+          refunds may be requested only if the order is cancelled before shipment
+          or the item is returned in its original condition and packaging.
+        </p>
+
+        <p>
+          Return shipping costs may be the responsibility of the customer unless
+          the return is due to an error or defect on our part.
+        </p>
+
+        <h2>7. No Exchanges</h2>
+        <p>
+          ANTIVIRUS GUIDE does not offer direct product exchanges.
+          If you wish to change a product, please request a refund (if eligible)
+          and place a new order.
+        </p>
+
+        <h2>8. Payment &amp; Delivery Confirmation</h2>
+        <p>
+          All payments on ANTIVIRUS GUIDE are securely processed through
+          <strong>trusted payment gateways such as Stripe</strong>.
+          Upon successful payment confirmation, your antivirus license is delivered
+          electronically to the email address provided during checkout.
+          Please ensure your email address is accurate to avoid delays.
+        </p>
+
+        <h2>9. Late or Missing Refunds</h2>
+        <p>
+          If you have not received your refund after 10 business days:
+        </p>
+
+        <ul>
+          <li>Check your bank or card statement again</li>
+          <li>Contact your bank or card issuer</li>
+          <li>Reach out to us at <strong>info@AntivirusGuide.shop</strong> for assistance</li>
+        </ul>
+
+        <h2>10. Contact Information</h2>
+        <p>
+          If you have any questions regarding this Refund &amp; Return Policy
+          or need help with an order, please contact us:
+        </p>
+
+        <p>
+          <strong>Email:</strong> info@AntivirusGuide.shop
+        </p>
+
+        <p>
+          We are committed to providing a safe, smooth, and reliable experience
+          every time you shop with <strong>ANTIVIRUS GUIDE</strong>.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="brand-line">
+        <img src="img/logo.png" alt="Antivirus Guide Logo">
+        <h3>ANTIVIRUS GUIDE</h3>
+      </div>
+<p>ANTIVIRUS GUIDE is your trusted platform for antivirus software, digital security, and complete protection solutions.</p>
+
+    </div>
+
+    <div>
+      <h4>Important Links</h4>
+      <a href="Terms.html">Terms & Conditions</a>
+      <a href="Refund.html">Refund & Return Policy</a>
+      <a href="Privacy.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+      <a href="Shopping.html">Shopping Policy</a>
+      <a href="Payment.html">Payment Policy</a>
+      <a href="Cookie.html">Cookie Policy</a>
+      <a href="Shipping.html">Shipping/Delivery Policy</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>USA</p>
+      <p>info@Antivirusguide.shop</p>
+    </div>
+
+    <div>
+      <h4>Service hours</h4>
+      <div class="hours"><span>Monday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Tuesday</span><span>08:00 - 18:00</span></div>
+      <div class="hours"><span>Wednesday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Thursday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Friday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Saturday</span><span>Closed</span></div>
+      <div class="hours"><span>Sunday</span><span>Closed</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ANTIVIRUS GUIDE - All Rights Reserved
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* SEARCH OPEN */
+document.getElementById("openSearch").onclick = () => {
+  document.getElementById("searchOverlay").style.display = "flex";
+  document.getElementById("searchInput").focus();
+};
+
+/* SEARCH CLOSE */
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+/* ESC CLOSE */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeSearch();
+});
+
+/* DEMO SEARCH DATA */
+const searchData = [
+  // Pages
+  "About",
+  "Disclaimer",
+  "Privacy Policy",
+  "Terms",
+  "Refund Policy",
+  "Contact Us",
+
+  // Antivirus Brands
+  "Norton",
+  "McAfee",
+  "Webroot",
+  "Trend Micro",
+  "Kaspersky",
+
+  // Shop
+  "Shop"
+];
+
+
+/* LIVE SEARCH */
+function liveSearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  searchData
+    .filter(item => item.toLowerCase().includes(input))
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item;
+      results.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>

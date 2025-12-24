@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antivirus Guide </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>/* =========================
+   PRODUCT DETAIL PAGE
+========================= */
+
+main.container{
+  max-width:1200px;
+  margin:120px auto 80px;
+  padding:0 16px;
+}
+
+/* Back link */
+.back-link{
+  display:inline-block;
+  margin-bottom:24px;
+  font-size:14px;
+  color:#0aa6a6;
+}
+
+.back-link:hover{
+  text-decoration:underline;
+}
+
+/* Product section */
+.product-section{
+  background:#ffffff;
+}
+
+/* Card */
+.product-card{
+  border:1px solid #e5e7eb;
+  border-radius:18px;
+  padding:28px;
+  position:relative;
+}
+
+/* Sale badge */
+.sale-badge{
+  position:absolute;
+  top:20px;
+  left:20px;
+  background:#ef4444;
+  color:#ffffff;
+  font-size:13px;
+  padding:6px 12px;
+  border-radius:20px;
+}
+
+/* Header layout */
+.product-header{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:36px;
+}
+
+/* Image column */
+.image-column{
+  display:flex;
+  justify-content:center;
+}
+
+.image-wrap{
+  background:#f8fafc;
+  border-radius:16px;
+  padding:26px;
+  border:1px solid #e5e7eb;
+}
+
+.image-wrap img{
+  max-width:100%;
+  height:300px;
+  object-fit:contain;
+}
+
+/* Product info */
+.product-info h1{
+  font-size:28px;
+  font-weight:700;
+  color:#0f172a;
+  margin-bottom:14px;
+}
+
+/* Price */
+.price-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:14px;
+}
+
+.price-row .original{
+  text-decoration:line-through;
+  color:#94a3b8;
+  font-size:16px;
+}
+
+.price-row .current{
+  font-size:24px;
+  font-weight:700;
+  color:#0aa6a6;
+}
+
+/* Description */
+.product-desc{
+  font-size:15.5px;
+  line-height:1.7;
+  color:#475569;
+  margin-bottom:18px;
+}
+
+/* Qty + Add */
+.meta-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.qty-input{
+  width:70px;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #d1d5db;
+  text-align:center;
+}
+
+/* Add to cart button */
+.btn-yellow{
+  background:#0aa6a6;
+  color:#ffffff;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.btn-yellow:hover{
+  background:#088f8f;
+}
+
+/* Muted text */
+.muted{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* =========================
+   CONTENT SECTION
+========================= */
+
+.content-section{
+  margin-top:50px;
+}
+
+.content-section h2{
+  font-size:22px;
+  font-weight:700;
+  margin:26px 0 12px;
+  color:#0f172a;
+  text-align:center;
+}
+
+.content-section h3{
+  font-size:18px;
+  font-weight:600;
+  margin:22px 0 10px;
+  color:#0f172a;
+}
+
+/* Lists */
+.content-section ul{
+  max-width:500px;
+  margin:10px auto 20px;
+  padding-left:20px;
+}
+
+.content-section ul li{
+  font-size:14.5px;
+  color:#475569;
+  line-height:1.7;
+}
+
+/* Tables */
+.specs{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0 26px;
+}
+
+.specs th,
+.specs td{
+  border:1px solid #e5e7eb;
+  padding:12px;
+  font-size:14px;
+  text-align:left;
+}
+
+.specs th{
+  background:#f9fafb;
+  color:#0f172a;
+  font-weight:600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+  .product-header{
+    grid-template-columns:1fr;
+  }
+
+  .image-wrap img{
+    height:240px;
+  }
+}
+
+@media(max-width:520px){
+  .product-info h1{
+    font-size:22px;
+  }
+
+  .price-row .current{
+    font-size:20px;
+  }
+
+  .content-section h2{
+    font-size:20px;
+  }
+}
+
+/* =========================
+   CENTERED GUARANTEE LIST
+========================= */
+
+.content-section ul{
+  max-width:500px;
+  margin:18px auto;
+  padding:0;
+  list-style:none;
+  text-align:center;
+}
+
+.content-section ul li{
+  font-size:15px;
+  color:#475569;
+  margin:8px 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+/* Optional check icon */
+.content-section ul li::before{
+  content:"✔";
+  color:#0aa6a6;
+  font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-flex">
+    <span>✉ info@Antivirusguide.shop</span>
+    <a href="contact.html" class="top-btn">GET IN TOUCH</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+
+   <div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Antivirus Guide">
+    <span>ANTIVIRUS GUIDE</span>
+  </a>
+</div>
+
+
+    <nav class="menu" id="navMenu">
+       <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+           <a href="Account.html">My Account</a>
+           <a href="Cart.html">Cart</a>
+
+    </nav>
+
+    <div class="search-icon" id="openSearch">🔍</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  </div>
+</header>
+
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search pages or products..."
+      onkeyup="liveSearch()"
+    >
+    <div class="search-results" id="searchResults"></div>
+    <button class="close-search" onclick="closeSearch()">✕</button>
+  </div>
+</div>
+<script>
+function toggleMenu(el) {
+  const menu = document.getElementById("navMenu");
+
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+
+  /* hamburger to X toggle */
+  el.classList.toggle("active");
+}
+</script>
+
+
+
+ <main class="container">
+    <a class="back-link" href="shop.html">← Back to products</a>
+
+    <section class="product-section">
+      <!-- yahan data-id add kiya hai -->
+      <article class="product-card" aria-labelledby="productTitle" data-id="t4">
+        <div class="sale-badge">Sale!</div>
+
+        <div class="product-header">
+          <!-- left: image -->
+          <div class="image-column">
+            <div class="main-image-wrap image-wrap">
+              
+              <img id="productImage" src="img/t4.webp" alt="Trend Micro Internet Security" />
+            </div>
+          </div>
+
+          <!-- right: product info -->
+          <div class="product-info">
+            <h1 id="productTitle">Trend Micro Internet Security</h1>
+
+            <div class="price-row price-block" aria-hidden="false">
+              <div class="original">$109.99</div>
+              <div class="current">$89.99</div>
+            </div>
+
+            <p class="product-desc">
+              Comprehensive protection for your digital life — Antivirus, Anti-Malware, Anti-Phishing, Anti-Ransomware and Web Protection across Windows, Mac, Android and iOS with 24/7 support.
+            </p>
+
+            <div class="meta-row">
+              <label for="qty">Quantity:</label>
+              <input id="qty" class="qty-input" type="number" min="1" value="1" />
+              <button id="addBtn" class="btn-yellow" aria-label="Add Trend Micro Internet Security to cart">Add to Cart</button>
+            </div>
+
+            <div style="margin-top:12px; color:var(--muted);">
+              <strong>Product Details</strong>
+              <div class="muted" style="margin-top:6px;">
+                <table style="font-size:14px;border-collapse:collapse;">
+                  <tr><td style="padding:0 6px 6px 0;"><strong>License</strong></td><td>1-Year Subscription, Multiple Devices (up to 3)</td></tr>
+                  <tr><td style="padding:0 6px 6px 0;"><strong>Delivery</strong></td><td>Activation Code by Email</td></tr>
+                  <tr><td style="padding:0 6px 6px 0;"><strong>Platform</strong></td><td>Windows, Mac, Android, iOS</td></tr>
+                  <tr><td style="padding:0 6px 6px 0;"><strong>Support</strong></td><td>24/7 Customer Support, Automatic Updates, Real-Time Protection</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section" aria-labelledby="detailsHeading">
+          <h2 id="detailsHeading">Buy With Confidence</h2>
+          <ul>
+            <li>30-Day Money Back Guarantee</li>
+            <li>One Of The Best Antivirus</li>
+          </ul>
+
+          <h2>Product Description</h2>
+          <p>
+            Trend Micro Internet Security provides comprehensive protection for your digital life, safeguarding you from online threats such as viruses, malware, ransomware, and phishing scams. With advanced AI learning, this security solution adapts to new and emerging threats, ensuring your devices and personal data remain secure. Whether you're shopping online, banking, or browsing, Trend Micro's multi-layered defense system offers robust protection while maintaining system performance. The user-friendly interface makes it easy to manage and customize security settings to suit your needs.
+          </p>
+
+          <h3>Key Features</h3>
+          <table class="specs" aria-label="Key features">
+            <tr><th>Feature</th><th>Description</th></tr>
+            <tr><td>Advanced AI Learning</td><td>Leverages machine learning to detect and block new and evolving threats.</td></tr>
+            <tr><td>Ransomware Protection</td><td>Protects your files and photos from ransomware attacks by preventing unauthorized encryption.</td></tr>
+            <tr><td>Web Threat Protection</td><td>Blocks dangerous websites, preventing malware downloads and phishing links.</td></tr>
+            <tr><td>Parental Controls</td><td>Block inappropriate websites and set time limits on internet usage for children.</td></tr>
+            <tr><td>Email Scams Filter</td><td>Detects and filters spam, phishing scams, and malicious emails.</td></tr>
+            <tr><td>Secure Browsing</td><td>Protects your personal data during online shopping and banking.</td></tr>
+            <tr><td>Privacy Scanner</td><td>Alerts you to privacy risks in your social network profiles.</td></tr>
+            <tr><td>Firewall Booster</td><td>Enhances the Windows firewall to protect against network intrusions.</td></tr>
+            <tr><td>System Optimization</td><td>Cleans up unnecessary files and optimizes system performance.</td></tr>
+          </table>
+
+          <h3>System Requirements</h3>
+          <table class="specs" aria-label="System requirements">
+            <tr><th>Component</th><th>Requirement</th></tr>
+            <tr><td>Operating System</td><td>Windows: 7, 8, 8.1, 10, 11 (32-bit &amp; 64-bit) • Mac: macOS 10.15 (Catalina) or later • Android: 5.0 or later • iOS: 11.0 or later</td></tr>
+            <tr><td>Processor</td><td>Windows: Intel® Pentium® 4 / AMD Athlon™ 64 or equivalent • Mac: Intel® Core™ i3 or later</td></tr>
+            <tr><td>Memory (RAM)</td><td>Windows: 2 GB (32-bit) / 4 GB (64-bit) • Mac: 2 GB or more</td></tr>
+            <tr><td>Disk Space</td><td>Windows: 1.3 GB free • Mac: 1.5 GB free</td></tr>
+            <tr><td>Internet</td><td>Required for installation, updates, and some features</td></tr>
+            <tr><td>Browser Support</td><td>Microsoft Edge, Google Chrome, Mozilla Firefox, Safari (latest versions)</td></tr>
+            <tr><td>Display</td><td>1024 x 768 or higher</td></tr>
+          </table>
+
+          <h3>Why This Product?</h3>
+          <p>
+            This table and description provide a comprehensive overview of Trend Micro Internet Security, covering everything essential to make an informed decision. It combines strong protection, easy management, and multi-platform support so you can browse, shop and bank online with confidence.
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+
+
+<script>
+   
+    const STORAGE_KEY = 'Antivirusguide_cart';
+
+    function readCart() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function writeCart(cart) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      updateCartAmount();
+    }
+
+    function updateCartAmount() {
+      const cart = readCart();
+      const total = cart.reduce((s,i) => s + (Number(i.price) * Number(i.qty)), 0);
+      const count = cart.reduce((s,i) => s + Number(i.qty), 0);
+      const el = document.getElementById('cartAmount');
+      if (el) el.textContent = `$${total.toFixed(2)} (${count})`;
+    }
+
+    function addProductToCart(item, qty = 1) {
+      const cart = readCart();
+      const idx = cart.findIndex(x => x.id === item.id);
+      if (idx > -1) {
+        cart[idx].qty = Number(cart[idx].qty) + Number(qty);
+      } else {
+        cart.push({ id: item.id, title: item.title, price: Number(item.price), image: item.image || '', qty: Number(qty) });
+      }
+      writeCart(cart);
+    }
+
+    // Hook up Add button
+    document.getElementById('addBtn').addEventListener('click', function (ev) {
+      ev.preventDefault();
+      const qtyIn = document.getElementById('qty');
+      const qty = qtyIn ? Math.max(1, Number(qtyIn.value) || 1) : 1;
+
+      const titleEl = document.getElementById('productTitle');
+      const imgEl = document.getElementById('productImage');
+      const productTitleText = titleEl ? titleEl.textContent.trim() : 'Trend Micro Internet Security';
+      const productImageSrc = imgEl ? imgEl.getAttribute('src') : 'img/t4.webp';
+
+      const product = {
+        id: productTitleText,
+        title: productTitleText,
+        price: 89.99,
+        image: productImageSrc
+      };
+
+      addProductToCart(product, qty);
+
+      this.textContent = 'Added ✓';
+      this.disabled = true;
+
+      // redirect to cart page
+      window.location.href = 'Cart.html';
+    });
+
+    // Update header on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateCartAmount);
+    } else {
+      updateCartAmount();
+    }
+
+  
+    
+  </script>
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="brand-line">
+        <img src="img/logo.png" alt="Antivirus Guide Logo">
+        <h3>ANTIVIRUS GUIDE</h3>
+      </div>
+<p>ANTIVIRUS GUIDE is your trusted platform for antivirus software, digital security, and complete protection solutions.</p>
+
+    </div>
+
+    <div>
+      <h4>Important Links</h4>
+      <a href="Terms.html">Terms & Conditions</a>
+      <a href="Refund.html">Refund & Return Policy</a>
+      <a href="Privacy.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+      <a href="Shopping.html">Shopping Policy</a>
+      <a href="Payment.html">Payment Policy</a>
+      <a href="Cookie.html">Cookie Policy</a>
+      <a href="Shipping.html">Shipping/Delivery Policy</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>USA</p>
+      <p>info@Antivirusguide.shop</p>
+    </div>
+
+    <div>
+      <h4>Service hours</h4>
+      <div class="hours"><span>Monday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Tuesday</span><span>08:00 - 18:00</span></div>
+      <div class="hours"><span>Wednesday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Thursday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Friday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Saturday</span><span>Closed</span></div>
+      <div class="hours"><span>Sunday</span><span>Closed</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ANTIVIRUS GUIDE - All Rights Reserved
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* SEARCH OPEN */
+document.getElementById("openSearch").onclick = () => {
+  document.getElementById("searchOverlay").style.display = "flex";
+  document.getElementById("searchInput").focus();
+};
+
+/* SEARCH CLOSE */
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+/* ESC CLOSE */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeSearch();
+});
+
+/* DEMO SEARCH DATA */
+const searchData = [
+  // Pages
+  "About",
+  "Disclaimer",
+  "Privacy Policy",
+  "Terms",
+  "Refund Policy",
+  "Contact Us",
+
+  // Antivirus Brands
+  "Norton",
+  "McAfee",
+  "Webroot",
+  "Trend Micro",
+  "Kaspersky",
+
+  // Shop
+  "Shop"
+];
+
+
+/* LIVE SEARCH */
+function liveSearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  searchData
+    .filter(item => item.toLowerCase().includes(input))
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item;
+      results.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>
+f5

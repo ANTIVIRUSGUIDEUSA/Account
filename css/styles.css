@@ -1,0 +1,352 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= COMMON ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: #0aa6a6;
+  color: #fff;
+  font-size: 13px;
+}
+.top-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.top-btn {
+  background: #2b2b2b;
+  color: #fff;
+  padding: 7px 18px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo img {
+  width: 46px;
+}
+.logo span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 0.6px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu a {
+  margin-left: 30px;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+.menu a:hover {
+  color: #0aa6a6;
+}
+
+/* SEARCH ICON */
+.search-icon {
+  font-size: 15px;
+  color: #000;
+  margin-left: 28px;
+  cursor: pointer;
+}
+.search-icon:hover {
+  color: #0aa6a6;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .menu {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    display: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  .menu a {
+    margin: 0;
+    padding: 15px 22px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .search-icon {
+    display: none;
+  }
+}
+
+/* ================= SEARCH OVERLAY ================= */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.search-box {
+  background: #fff;
+  width: 90%;
+  max-width: 560px;
+  padding: 25px;
+  border-radius: 6px;
+  position: relative;
+}
+.search-box input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.search-results {
+  margin-top: 15px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.search-results div {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.search-results div:hover {
+  background: #f5f5f5;
+}
+.close-search {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 32px;
+  height: 32px;
+  background: #0aa6a6;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: linear-gradient(135deg, #0aa6a6, #008b8b);
+  color: #fff;
+  padding: 60px 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.footer h3,
+.footer h4 {
+  margin-bottom: 15px;
+}
+.footer p,
+.footer a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+  text-decoration: none;
+}
+.footer a {
+  display: block;
+  margin-bottom: 8px;
+}
+.hours {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding: 6px 0;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.menu a {
+  position: relative;
+  margin-left: 30px;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  padding-bottom: 6px; /* underline ke liye space */
+}
+
+/* underline hidden by default */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0aa6a6; /* theme color */
+  transition: width 0.3s ease;
+}
+
+/* mouse hover par underline */
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #0aa6a6;
+}/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ===== ACTIVE = X ICON ===== */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MOBILE ONLY */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+}
+.footer-brand{
+  max-width: 100%;
+}
+
+/* logo + name same line */
+.brand-line{
+  display: inline-flex;   /* 🔥 flex nahi, inline-flex */
+  align-items: center;
+  gap: 12px;
+}
+
+/* logo */
+.brand-line img{
+  width: 45px;
+  flex-shrink: 0;         /* 🔥 logo kabhi niche nahi jayega */
+}
+
+/* ANTIVIRUS GUIDE */
+.brand-name{
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;   /* 🔥 ek hi line */
+  color: #ffffff;
+}
+
+/* description */
+.brand-desc{
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo img {
+  height: 40px;   /* apne logo ke hisaab se */
+  width: auto;
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap; /* line break nahi hoga */
+}

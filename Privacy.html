@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antivirus Guide </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>/* =========================
+   PAGE TITLE (PRIVACY POLICY)
+========================= */
+.tf-page-title {
+  background: #ffffff;
+  padding: 70px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tf-page-title .box-title {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.tf-page-title .title {
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+}
+
+.tf-page-title .title span {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Big underline – navbar color */
+.tf-page-title .title span::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 4px;
+  background-color: #0aa6a6; /* navbar color */
+  margin: 14px auto 0;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.tf-page-title:hover .title span::after {
+  width: 180px;
+}
+
+/* =========================
+   PRIVACY POLICY CONTENT
+========================= */
+.s-term-user {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.s-term-user .content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.term-item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Paragraphs */
+.term-item p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #475569;
+  text-align: left;
+}
+
+/* Headings center */
+.term-item h2,
+.term-item h3 {
+  text-align: center;
+}
+
+/* Heading styles */
+.term-item h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 32px;
+}
+
+.term-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 20px;
+}
+
+/* Lists */
+.term-item ul {
+  margin: 10px 0 10px 22px;
+  padding-left: 18px;
+}
+
+.term-item ul li {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Strong text */
+.term-item strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .tf-page-title {
+    padding: 50px 0;
+  }
+
+  .tf-page-title .title {
+    font-size: 28px;
+  }
+
+  .s-term-user {
+    padding: 50px 0;
+  }
+
+  .term-item h2 {
+    font-size: 22px;
+  }
+
+  .term-item p,
+  .term-item ul li {
+    font-size: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-flex">
+    <span>✉ info@Antivirusguide.shop</span>
+    <a href="contact.html" class="top-btn">GET IN TOUCH</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+
+   <div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Antivirus Guide">
+    <span>ANTIVIRUS GUIDE</span>
+  </a>
+</div>
+
+
+    <nav class="menu" id="navMenu">
+       <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+           <a href="Account.html">My Account</a>
+           <a href="Cart.html">Cart</a>
+
+    </nav>
+
+    <div class="search-icon" id="openSearch">🔍</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  </div>
+</header>
+
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search pages or products..."
+      onkeyup="liveSearch()"
+    >
+    <div class="search-results" id="searchResults"></div>
+    <button class="close-search" onclick="closeSearch()">✕</button>
+  </div>
+</div>
+<script>
+function toggleMenu(el) {
+  const menu = document.getElementById("navMenu");
+
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+
+  /* hamburger to X toggle */
+  el.classList.toggle("active");
+}
+</script>
+
+
+
+
+
+<!-- DUMMY CONTENT -->
+<section class="tf-page-title">
+  <div class="container">
+    <div class="box-title text-center">
+      <h1 class="title w-100"><span>Privacy Policy</span></h1>
+    </div>
+  </div>
+</section>
+<!-- /Title Page -->
+
+<!-- Privacy Policy -->
+<section class="s-term-user flat-spacing-13">
+  <div class="container">
+    <div class="content">
+      <div class="term-item display-gap">
+
+        <p>
+          At <strong>ANTIVIRUS GUIDE</strong>, we are committed to protecting your
+          <em>personal information</em> and maintaining transparency regarding how
+          your data is collected, used, and safeguarded. This Privacy Policy explains
+          our practices so you can confidently use our website and services.
+        </p>
+
+        <h2>1. Who We Are</h2>
+        <p>
+          <strong>ANTIVIRUS GUIDE</strong> is an independent e-commerce platform
+          operating in the United States, offering genuine and licensed
+          <strong>antivirus and cybersecurity software</strong>.
+          We function as a <strong>third-party authorized reseller</strong> and focus
+          on delivering secure, reliable, and user-friendly digital services.
+        </p>
+
+        <h2>2. Information We Collect</h2>
+        <p>
+          When you visit or make a purchase on our website, we may collect the
+          following information:
+        </p>
+
+        <ul>
+          <li><strong>Personal Information</strong> – Name, email address, billing details, and contact information</li>
+          <li><strong>Transaction Information</strong> – Order details, payment confirmation, and delivery records</li>
+          <li><strong>Technical Information</strong> – IP address, browser type, device data, and usage behavior collected via cookies or analytics tools</li>
+        </ul>
+
+        <p>
+          We collect only the information necessary to process your orders,
+          improve our services, and maintain platform security.
+        </p>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>
+          Your information may be used for the following purposes:
+        </p>
+
+        <ul>
+          <li>Processing and delivering digital products</li>
+          <li>Providing customer support and responding to inquiries</li>
+          <li>Sending order confirmations and service-related communications</li>
+          <li>Improving website performance, security, and user experience</li>
+        </ul>
+
+        <p>
+          <strong>ANTIVIRUS GUIDE does not sell, rent, or trade your personal data</strong>
+          to unauthorized third parties.
+        </p>
+
+        <h2>4. Payment Security</h2>
+        <p>
+          All payments on ANTIVIRUS GUIDE are processed securely through
+          <strong>PCI-compliant payment gateways such as Stripe</strong>.
+          We do not store your credit or debit card details on our servers.
+        </p>
+
+        <h2>5. Digital Product Delivery</h2>
+        <p>
+          All antivirus software licenses are delivered
+          <em>electronically</em> to your <strong>registered email address</strong>.
+          You will receive confirmation and activation details after successful
+          payment processing.
+        </p>
+
+        <h2>6. Data Protection & Security Measures</h2>
+        <p>
+          We employ industry-standard security practices to protect your data,
+          including:
+        </p>
+
+        <ul>
+          <li>SSL encryption for secure data transmission</li>
+          <li>Firewalls and restricted system access</li>
+          <li>Ongoing monitoring for security threats and vulnerabilities</li>
+        </ul>
+
+        <p>
+          Our goal is to keep your information <em>confidential, accurate, and secure</em>
+          at all times.
+        </p>
+
+        <h2>7. Cookies & Analytics</h2>
+        <p>
+          ANTIVIRUS GUIDE uses cookies and similar technologies to:
+        </p>
+
+        <ul>
+          <li>Understand how visitors use our website</li>
+          <li>Improve functionality and performance</li>
+          <li>Maintain secure sessions during checkout</li>
+        </ul>
+
+        <p>
+          You may control or disable cookies through your browser settings,
+          though some features of the website may be affected.
+        </p>
+
+        <h2>8. Your Privacy Rights</h2>
+        <p>
+          Depending on your location, you may have the right to:
+        </p>
+
+        <ul>
+          <li>Request access to the personal data we hold about you</li>
+          <li>Request correction or deletion of your information</li>
+          <li>Opt out of non-essential communications</li>
+        </ul>
+
+        <p>
+          To exercise these rights, contact us at
+          <strong>info@AntivirusGuide.shop</strong>.
+        </p>
+
+        <h2>9. Data Retention</h2>
+        <p>
+          We retain personal data only for as long as necessary to fulfill
+          business, legal, or regulatory requirements. Once data is no longer
+          required, it is securely deleted or anonymized.
+        </p>
+
+        <h2>10. Third-Party Services</h2>
+        <p>
+          We may share limited information with trusted third-party providers
+          (such as payment processors or hosting services) strictly for service
+          fulfillment. These providers are contractually obligated to protect
+          your information.
+        </p>
+
+        <h2>11. Children’s Privacy</h2>
+        <p>
+          ANTIVIRUS GUIDE does not knowingly collect personal information from
+          individuals under the age of 18. If such data is identified, it will
+          be removed promptly.
+        </p>
+
+        <h2>12. Policy Updates</h2>
+        <p>
+          This Privacy Policy may be updated periodically to reflect changes in
+          legal requirements or our business practices. Updates will be posted
+          on this page with a revised effective date.
+        </p>
+
+        <h2>13. Acceptance of This Policy</h2>
+        <p>
+          By using our website, you acknowledge that you have read and understood
+          this Privacy Policy and agree to its terms.
+        </p>
+
+        <h2>14. Contact Us</h2>
+        <p>
+          If you have any questions or concerns about this Privacy Policy,
+          please contact us:
+        </p>
+
+        <p>
+          <strong>Email:</strong> info@AntivirusGuide.shop
+        </p>
+
+        <p>
+          We are committed to handling your data with care, transparency,
+          and respect at all times.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="brand-line">
+        <img src="img/logo.png" alt="Antivirus Guide Logo">
+        <h3>ANTIVIRUS GUIDE</h3>
+      </div>
+<p>ANTIVIRUS GUIDE is your trusted platform for antivirus software, digital security, and complete protection solutions.</p>
+
+    </div>
+
+    <div>
+      <h4>Important Links</h4>
+      <a href="Terms.html">Terms & Conditions</a>
+      <a href="Refund.html">Refund & Return Policy</a>
+      <a href="Privacy.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+      <a href="Shopping.html">Shopping Policy</a>
+      <a href="Payment.html">Payment Policy</a>
+      <a href="Cookie.html">Cookie Policy</a>
+      <a href="Shipping.html">Shipping/Delivery Policy</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>USA</p>
+      <p>info@Antivirusguide.shop</p>
+    </div>
+
+    <div>
+      <h4>Service hours</h4>
+      <div class="hours"><span>Monday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Tuesday</span><span>08:00 - 18:00</span></div>
+      <div class="hours"><span>Wednesday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Thursday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Friday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Saturday</span><span>Closed</span></div>
+      <div class="hours"><span>Sunday</span><span>Closed</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ANTIVIRUS GUIDE - All Rights Reserved
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* SEARCH OPEN */
+document.getElementById("openSearch").onclick = () => {
+  document.getElementById("searchOverlay").style.display = "flex";
+  document.getElementById("searchInput").focus();
+};
+
+/* SEARCH CLOSE */
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+/* ESC CLOSE */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeSearch();
+});
+
+/* DEMO SEARCH DATA */
+const searchData = [
+  // Pages
+  "About",
+  "Disclaimer",
+  "Privacy Policy",
+  "Terms",
+  "Refund Policy",
+  "Contact Us",
+
+  // Antivirus Brands
+  "Norton",
+  "McAfee",
+  "Webroot",
+  "Trend Micro",
+  "Kaspersky",
+
+  // Shop
+  "Shop"
+];
+
+
+/* LIVE SEARCH */
+function liveSearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  searchData
+    .filter(item => item.toLowerCase().includes(input))
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item;
+      results.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Antivirus Guide </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>/* =========================
+   SHOP HERO
+========================= */
+
+.shop-hero{
+  background:#ffffff;
+  padding:140px 20px 80px;
+  text-align:center;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.shop-hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#ecfeff;
+  color:#0aa6a6;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.shop-hero h1{
+  font-size:38px;
+  font-weight:700;
+  color:#0f172a;
+  margin-bottom:14px;
+}
+
+.shop-hero p{
+  max-width:720px;
+  margin:0 auto 22px;
+  font-size:16px;
+  color:#475569;
+  line-height:1.7;
+}
+
+.shop-hero-meta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:16px;
+  font-size:14px;
+  color:#334155;
+}
+
+.shop-hero-meta i{
+  color:#0aa6a6;
+  margin-right:6px;
+}
+
+/* =========================
+   PAGE HERO (ALL PRODUCTS)
+========================= */
+
+.page-hero{
+  background:#f9fafb;
+  border-top:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb;
+  padding:50px 0;
+}
+
+.page-hero h1{
+  text-align:center;
+  font-size:30px;
+  font-weight:700;
+  color:#0f172a;
+}
+
+/* =========================
+   PRODUCT SECTIONS
+========================= */
+
+.product-section{
+  padding:70px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.section-header h2{
+  font-size:26px;
+  font-weight:700;
+  color:#0f172a;
+}
+
+.view-all{
+  font-size:14px;
+  color:#0aa6a6;
+  text-decoration:none;
+}
+
+.view-all:hover{
+  text-decoration:underline;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+/* Product Card */
+.product{
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  transition:.3s;
+}
+
+.product:hover{
+  box-shadow:0 18px 40px rgba(0,0,0,0.08);
+  transform:translateY(-4px);
+}
+
+.product-link{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* Image */
+.thumb{
+  background:#f8fafc;
+  border-radius:12px;
+  padding:14px;
+  text-align:center;
+  margin-bottom:12px;
+}
+
+.thumb img{
+  max-width:100%;
+  height:150px;
+  object-fit:contain;
+}
+
+/* Title */
+.prod-title{
+  font-size:15px;
+  font-weight:600;
+  color:#0f172a;
+  margin-bottom:8px;
+  line-height:1.4;
+}
+
+/* Price */
+.prod-price{
+  font-size:15px;
+  margin-bottom:14px;
+}
+
+.prod-price .old{
+  text-decoration:line-through;
+  color:#94a3b8;
+  margin-right:6px;
+}
+
+.prod-price .new{
+  color:#0aa6a6;
+  font-weight:700;
+}
+
+/* Add to Cart Button */
+.btn-add{
+  margin-top:auto;
+  background:#0aa6a6;
+  color:#ffffff;
+  border:none;
+  padding:12px;
+  border-radius:10px;
+  font-size:14px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn-add:hover{
+  background:#088f8f;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+  .product-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:820px){
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .shop-hero h1{
+    font-size:30px;
+  }
+}
+
+@media(max-width:520px){
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .shop-hero{
+    padding:120px 16px 60px;
+  }
+
+  .shop-hero h1{
+    font-size:26px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container top-flex">
+    <span>✉ info@Antivirusguide.shop</span>
+    <a href="contact.html" class="top-btn">GET IN TOUCH</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-flex">
+
+   <div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Antivirus Guide">
+    <span>ANTIVIRUS GUIDE</span>
+  </a>
+</div>
+
+
+    <nav class="menu" id="navMenu">
+       <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="Shop.html">Shop</a>
+          <a href="Disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact</a>
+           <a href="Account.html">My Account</a>
+           <a href="Cart.html">Cart</a>
+
+    </nav>
+
+    <div class="search-icon" id="openSearch">🔍</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  </div>
+</header>
+
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search pages or products..."
+      onkeyup="liveSearch()"
+    >
+    <div class="search-results" id="searchResults"></div>
+    <button class="close-search" onclick="closeSearch()">✕</button>
+  </div>
+</div>
+<script>
+function toggleMenu(el) {
+  const menu = document.getElementById("navMenu");
+
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+
+  /* hamburger to X toggle */
+  el.classList.toggle("active");
+}
+</script>
+
+
+
+ <!-- SHOP CONTENT -->
+  <main>
+    <!-- HERO -->
+  <section class="shop-hero">
+  <div class="shop-hero-badge">
+    <i class="fas fa-shield-alt"></i>
+    Trusted Antivirus Licenses • Instant Digital Delivery
+  </div>
+
+  <h1>Protect Your Devices with Trusted Antivirus Solutions</h1>
+
+  <p>
+    Discover genuine antivirus and cybersecurity software carefully selected by
+    <strong>ANTIVIRUS GUIDE</strong>.
+    All products are officially licensed and delivered digitally to your registered email —
+    fast, secure, and hassle-free.
+  </p>
+
+  <div class="shop-hero-meta">
+    <span><i class="fas fa-check-circle"></i> Authorized &amp; verified antivirus reseller</span>
+    <span><i class="fas fa-lock"></i> Secure payments through encrypted gateways</span>
+    <span><i class="fas fa-bolt"></i> Instant license key delivery after purchase</span>
+  </div>
+</section>
+
+
+    <!-- PRODUCTS + SIDEBAR -->
+    <section class="page-hero">
+    <div class="container">
+      <h1>All Products</h1>
+      
+    </div>
+  </section>
+
+  <!-- SHOP CONTENT -->
+  
+    <!-- Computer Peripherals -->
+     <section class="product-section">
+      <div class="section-header">
+        <h2>Norton Security</h2>
+        <a class="view-all" href="norton.html">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p9 -->
+        <article class="product" data-id="p9" data-title="Norton 360 Premium For 10 Devices" data-price="99.99" data-image="img/n1.webp">
+          <a class="product-link" href="product-n1.html" title="Norton 360 Premium">
+            <div class="thumb"><img src="img/n1.webp" alt="Norton 360 Premium"></div>
+            <h3 class="prod-title">Norton 360 Premium For 10 Devices</h3>
+          </a>
+          <div class="prod-price"><span class="new">$99.99</span></div>
+          <button class="btn-add" data-id="p9" data-price="99.99">Add to cart</button>
+        </article>
+
+        <!-- p10 -->
+        <article class="product" data-id="p10" data-title="Norton 360 Standard — 1 Device" data-price="64.99" data-image="img/n2.webp">
+          <a class="product-link" href="product-n2.html" title="Norton 360 Standard">
+            <div class="thumb"><img src="img/n2.webp" alt="Norton Standard"></div>
+            <h3 class="prod-title">Norton 360 Standard — 1 Device</h3>
+          </a>
+          <div class="prod-price"><span class="new">$64.99</span></div>
+          <button class="btn-add" data-id="p10" data-price="64.99">Add to cart</button>
+        </article>
+
+        <!-- p11 -->
+        <article class="product" data-id="p11" data-title="Norton 360 Deluxe — 3 Devices" data-price="79.99" data-image="img/n3.webp">
+          <a class="product-link" href="product-n3.html" title="Norton Deluxe">
+            <div class="thumb"><img src="img/n3.webp" alt="Norton Deluxe"></div>
+            <h3 class="prod-title">Norton 360 Deluxe — 3 Devices</h3>
+          </a>
+          <div class="prod-price"><span class="new">$79.99</span></div>
+          <button class="btn-add" data-id="p11" data-price="79.99">Add to cart</button>
+        </article>
+
+        <!-- p12 -->
+        <article class="product" data-id="p12" data-title="Norton 360 Deluxe - 5 devices" data-price="89.99" data-image="img/n4.webp">
+          <a class="product-link" href="product-n4.html" title="Norton 5 devices">
+            <div class="thumb"><img src="img/n4.webp" alt="Norton 5 devices"></div>
+            <h3 class="prod-title">Norton 360 Deluxe - 5 devices</h3>
+          </a>
+          <div class="prod-price"><span class="new">$89.99</span></div>
+          <button class="btn-add" data-id="p12" data-price="89.99">Add to cart</button>
+        </article>
+      </div>
+    </section>
+
+     <section class="product-section">
+      <div class="section-header">
+        <h2>TREND MICRO</h2>
+        <a class="view-all" href="#">View All Products</a>
+      </div>
+
+      <div class="product-grid">
+        <!-- p5 -->
+        <article class="product" data-id="p5" data-title="Trend Micro Internet Security 3 Devices 1 Year" data-price="49.99" data-image="img/t1.webp">
+          <a class="product-link" href="product-t1.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="img/t1.webp" alt="Trend Micro Internet"></div>
+            <h3 class="prod-title">Trend Micro Internet Security 3 Devices 1 Year</h3>
+          </a>
+          <div class="prod-price"><span class="old">$59.99</span> <span class="new">$49.99</span></div>
+          <button class="btn-add" data-id="p5" data-price="49.99">Add to cart</button>
+        </article>
+
+        <!-- p6 -->
+        <article class="product" data-id="p6" data-title="Trend Micro Internet Security 3 User, 1 Year" data-price="89.99" data-image="img/t2.webp">
+          <a class="product-link" href="product-t2.html" title="Trend Micro Internet">
+            <div class="thumb"><img src="img/t2.webp" alt="Trend Micro Internet"></div>
+            <h3 class="prod-title">Trend Micro Internet Security 3 User, 1 Year</h3>
+          </a>
+          <div class="prod-price"><span class="old">$99,99</span> <span class="new">$89.99</span></div>
+          <button class="btn-add" data-id="p6" data-price="89.99">Add to cart</button>
+        </article>
+
+        <!-- p7 -->
+        <article class="product" data-id="p7" data-title="Trend Micro Maximum Security 3 Devices 1 Year" data-price="99.99" data-image="img/t3.webp">
+          <a class="product-link" href="product-t3.html" title="Trend Micro Maximum">
+            <div class="thumb"><img src="img/t3.webp" alt="Trend Micro Maximum"></div>
+            <h3 class="prod-title">Trend Micro Maximum Security 3 Devices 1 Year</h3>
+          </a>
+          <div class="prod-price"><span class="old">$119.99</span> <span class="new">$99.99</span></div>
+          <button class="btn-add" data-id="p7" data-price="99.99">Add to cart</button>
+        </article>
+
+        <!-- p8 -->
+        <article class="product" data-id="p8" data-title="Trend Micro Internet Security" data-price="89.99" data-image="img/t4.webp">
+          <a class="product-link" href="product-t4.html" title="Trend Micro Internet Security">
+            <div class="thumb"><img src="img/t4.webp" alt="Trend Micro Internet Security"></div>
+            <h3 class="prod-title">Trend Micro Internet Security</h3>
+          </a>
+          <div class="prod-price"><span class="old">$109.99</span> <span class="new">$89.99</span></div>
+          <button class="btn-add" data-id="p8" data-price="89.99">Add to cart</button>
+        </article>
+      </div>
+    </section>
+
+
+<section class="product-section"> <div class="section-header"> <h2>McAfee Antivirus</h2> <a class="view-all" href="Shop.html">View All Products</a> </div> <div class="product-grid"> <article class="product" data-id="mcafee1" data-price="29.99"> <a class="product-link" href="product-m1.html"> <div class="thumb"><img src="img/m1.webp" alt="McAfee"></div> <h3 class="prod-title">McAfee Total Protection — 5 Devices (2025)</h3> </a> <ul class="prod-features"> <li>✔ Secure VPN</li> <li>✔ Identity Monitoring</li> </ul> <div class="prod-price">$29.99</div> <button class="btn-add" data-id="mcafee1" data-price="29.99">Add to cart</button> </article> </div> </section> <section class="product-section"> <div class="section-header"> <h2>AVG Antivirus</h2> <a class="view-all" href="Shop.html">View All Products</a> </div> <div class="product-grid"> <article class="product" data-id="avg1" data-price="29.99"> <a class="product-link" href="product-a1.html"> <div class="thumb"><img src="img/a1.jpg" alt="AVG"></div> <h3 class="prod-title">AVG Ultimate 2024 — 5 Devices (2 Years)</h3> </a> <ul class="prod-features"> <li>✔ Antivirus + VPN</li> <li>✔ Performance Cleaner</li> </ul> <div class="prod-price">$29.99</div> <button class="btn-add" data-id="avg1" data-price="29.99">Add to cart</button> </article> </div> </section>
+
+
+
+
+
+
+  </main>
+
+
+
+ <script>
+
+
+    
+    // --- Add to cart behavior: add item to localStorage and redirect to cart.html ---
+    function getCart() {
+      try { return JSON.parse(localStorage.getItem('Antivirusguide_cart') || '[]'); } catch(e){ return []; }
+    }
+    function saveCart(cart) {
+      localStorage.setItem('Antivirusguide_cart', JSON.stringify(cart));
+      updateCartAmount();
+    }
+    function updateCartAmount() {
+      const cart = getCart();
+      const total = cart.reduce((s,i) => s + (i.price * i.qty), 0);
+      const el = document.getElementById('cartAmount');
+      if(el) el.textContent = '$' + total.toFixed(2);
+    }
+
+    // initialize cart amount on page load
+    updateCartAmount();
+
+    // helper to find product metadata from article dataset
+    function getProductDataFromArticle(el) {
+      // el is the .product article element
+      return {
+        id: el.getAttribute('data-id'),
+        title: el.getAttribute('data-title') || (el.querySelector('.prod-title') && el.querySelector('.prod-title').textContent.trim()),
+        price: parseFloat(el.getAttribute('data-price') || el.querySelector('.prod-price .new')?.textContent.replace(/[^0-9.-]+/g,'') || '0'),
+        image: el.getAttribute('data-image') || (el.querySelector('.thumb img') && el.querySelector('.thumb img').getAttribute('src')) || ''
+      };
+    }
+
+    // When Add to cart clicked: add and redirect to cart page
+    document.querySelectorAll('.btn-add').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = btn.getAttribute('data-id');
+        // try to find nearest article
+        const article = btn.closest('.product');
+        const pdata = getProductDataFromArticle(article);
+        if(!pdata.id) pdata.id = id || ('p_' + Date.now());
+        // add to cart: if existing, increment qty
+        const cart = getCart();
+        const idx = cart.findIndex(i => i.id === pdata.id);
+        if(idx > -1) {
+          cart[idx].qty += 1;
+        } else {
+          cart.push({ id: pdata.id, title: pdata.title, price: Number(pdata.price), image: pdata.image, qty: 1 });
+        }
+        saveCart(cart);
+        // redirect to cart page
+        window.location.href = 'Cart.html';
+      });
+    });
+
+    // Allow clicking thumb/title already goes to product.html by anchor wrapping above
+    // But make whole article clickable on Enter as accessibility enhancement
+    document.querySelectorAll('.product').forEach(prod => {
+      prod.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') {
+          const link = prod.querySelector('a.product-link');
+          if(link) link.click();
+        }
+      });
+      // set tabindex for keyboard focus
+      prod.setAttribute('tabindex','0');
+    });
+  </script>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="brand-line">
+        <img src="img/logo.png" alt="Antivirus Guide Logo">
+        <h3>ANTIVIRUS GUIDE</h3>
+      </div>
+<p>ANTIVIRUS GUIDE is your trusted platform for antivirus software, digital security, and complete protection solutions.</p>
+
+    </div>
+
+    <div>
+      <h4>Important Links</h4>
+      <a href="Terms.html">Terms & Conditions</a>
+      <a href="Refund.html">Refund & Return Policy</a>
+      <a href="Privacy.html">Privacy Policy</a>
+      <a href="Disclaimer.html">Disclaimer</a>
+      <a href="Shopping.html">Shopping Policy</a>
+      <a href="Payment.html">Payment Policy</a>
+      <a href="Cookie.html">Cookie Policy</a>
+      <a href="Shipping.html">Shipping/Delivery Policy</a>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>USA</p>
+      <p>info@Antivirusguide.shop</p>
+    </div>
+
+    <div>
+      <h4>Service hours</h4>
+      <div class="hours"><span>Monday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Tuesday</span><span>08:00 - 18:00</span></div>
+      <div class="hours"><span>Wednesday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Thursday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Friday</span><span>09:00 - 18:00</span></div>
+      <div class="hours"><span>Saturday</span><span>Closed</span></div>
+      <div class="hours"><span>Sunday</span><span>Closed</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ANTIVIRUS GUIDE - All Rights Reserved
+  </div>
+</footer>
+
+<script>
+/* MOBILE MENU */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+/* SEARCH OPEN */
+document.getElementById("openSearch").onclick = () => {
+  document.getElementById("searchOverlay").style.display = "flex";
+  document.getElementById("searchInput").focus();
+};
+
+/* SEARCH CLOSE */
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+/* ESC CLOSE */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeSearch();
+});
+
+/* DEMO SEARCH DATA */
+const searchData = [
+  // Pages
+  "About",
+  "Disclaimer",
+  "Privacy Policy",
+  "Terms",
+  "Refund Policy",
+  "Contact Us",
+
+  // Antivirus Brands
+  "Norton",
+  "McAfee",
+  "Webroot",
+  "Trend Micro",
+  "Kaspersky",
+
+  // Shop
+  "Shop"
+];
+
+
+/* LIVE SEARCH */
+function liveSearch() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const results = document.getElementById("searchResults");
+  results.innerHTML = "";
+
+  if (input === "") return;
+
+  searchData
+    .filter(item => item.toLowerCase().includes(input))
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item;
+      results.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>
